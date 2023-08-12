@@ -1,7 +1,7 @@
 
 .btn {
     border: none;
-    // padding: 13px 46px;
+    //padding: 13px 46px;
     text-align: center;
     font-size: 16px;
     border-radius: 5px;
@@ -10,16 +10,29 @@
 .btn-red {
   background-color: $red;
   color: $white;
+  text-transform: uppercase;
+
 
 }
 .btn-yellow {
     background-color: $yellow;
     color: $black;
+    text-transform: uppercase;
+
+  }
+  .btn-padding {
+    padding: 14px 16px;
+  }
+  .btn-shop-yellow{
+   
+    font-size: 16px;
+    
   }
 .btn-blue {
   background-color:$blue;
     color: $black;
-    border: 1px solid $greywhite;
+    text-transform: uppercase;
+
 
 }
 .btn-black {
@@ -35,5 +48,5 @@
 .btn-fonts {
   font-size: 20px;
    font-weight: 700;
-}
+  }
 

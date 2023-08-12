@@ -13,17 +13,27 @@
 .btn-red {
   background-color: #E30613;
   color: #F6F6F6;
+  text-transform: uppercase;
 }
 
 .btn-yellow {
   background-color: #FFC423;
   color: #000000;
+  text-transform: uppercase;
+}
+
+.btn-padding {
+  padding: 14px 16px;
+}
+
+.btn-shop-yellow {
+  font-size: 16px;
 }
 
 .btn-blue {
   background-color: #009ADA;
   color: #000000;
-  border: 1px solid #E2E2E2;
+  text-transform: uppercase;
 }
 
 .btn-black {
@@ -171,12 +181,47 @@
 
 .category-card {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 40px;
   gap: 23px;
 }
 .category-card .card-details {
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.category-card .card-details .card-img {
+  background-color: #DBFFFB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+  width: 100%;
+  padding: 50px 0;
+}
+.category-card .card-details .card-img img {
+  width: 100%;
+}
+.category-card .card-details .card-desc {
+  flex-grow: 1;
+  width: 100%;
+}
+.category-card .card-details .card-desc .card-content {
+  padding: 21px 50px 23px 15px;
+}
+.category-card .card-details .card-desc .card-content .title {
+  font-size: 24px;
+}
+.category-card .card-details .card-desc .card-content .subtitle {
+  padding: 13px 0px 17px;
+  color: #757575;
+  font-size: 15px;
+  font-style: normal;
+}
+.category-card .card-details .card-desc .card-content .subtitle span {
+  font-weight: 600;
 }
 
 .hero-section .hero-container {
@@ -220,14 +265,33 @@
   margin-right: 25px;
   margin-top: 70px;
 }
-.main-container .all-btns {
+.main-container .btn-arrow-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .btn-arrow-icons i {
+  padding: 0px 9px;
+  font-weight: 800;
+}
+.main-container .btn-arrow-icons .all-btns {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 80px;
   gap: 23px;
+  width: 100%;
 }
-.main-container .all-btns .bt-font {
+.main-container .btn-arrow-icons .all-btns .bt-font {
   font-size: 35px;
+  text-transform: capitalize;
+}
+
+.banner-section {
+  margin-top: 40px;
+}
+.banner-section .banner-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 body {

@@ -1,10 +1,51 @@
 .category-card {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: 464px;
     margin-top: 40px;
     gap: 23px;
 
     .card-details {
         border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+
+        .card-img {
+            background-color: #DBFFFB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 2;
+            width: 100%;
+            padding: 50px 0;
+            img {
+                width: 100%;
+
+            }
+        }
+
+        .card-desc {
+            flex-grow: 1;
+            width: 100%;
+            .card-content {
+                padding: 21px 50px 23px 15px;
+                .title {
+                    font-size: 24px;
+                    
+                }
+                .subtitle {
+                    padding: 13px 0px 17px;
+                    color: #757575;
+                    font-size: 15px;
+                    font-style: normal;
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
     }
 }
