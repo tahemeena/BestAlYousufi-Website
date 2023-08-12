@@ -1,0 +1,39 @@
+
+.btn {
+    border: none;
+    // padding: 13px 46px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-red {
+  background-color: $red;
+  color: $white;
+
+}
+.btn-yellow {
+    background-color: $yellow;
+    color: $black;
+  }
+.btn-blue {
+  background-color:$blue;
+    color: $black;
+    border: 1px solid $greywhite;
+
+}
+.btn-black {
+    background-color: $black;
+    color: $white;
+}
+.btn-white {
+  background-color: $originalwhite;
+    color: $black;
+    border: 1px solid $greywhite;
+
+}
+.btn-fonts {
+  font-size: 20px;
+   font-weight: 700;
+}
+

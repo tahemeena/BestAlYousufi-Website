@@ -1,0 +1,18 @@
+.main-container {
+    margin-left: 30px;
+    margin-right: 25px;
+    margin-top: 70px;
+
+    .all-btns {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-rows: 80px;
+        gap: 23px;
+        .bt-font {
+            font-size: 35px;
+        }
+    }
+
+   
+
+  }

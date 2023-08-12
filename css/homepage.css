@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.btn-red {
+  background-color: #E30613;
+  color: #F6F6F6;
+}
+
+.btn-yellow {
+  background-color: #FFC423;
+  color: #000000;
+}
+
+.btn-blue {
+  background-color: #009ADA;
+  color: #000000;
+  border: 1px solid #E2E2E2;
+}
+
+.btn-black {
+  background-color: #000000;
+  color: #F6F6F6;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #E2E2E2;
+}
+
+.btn-fonts {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 80px;
+  align-items: center;
+  background-color: #E30613;
+}
+.header .logo img {
+  width: 120px;
+}
+.header .searchbar {
+  display: flex;
+}
+.header .searchbar .search-cnt {
+  flex-grow: 1;
+  padding: 12px;
+  border: none;
+}
+.header .searchbar .searchicon {
+  background-color: #FFC423;
+  border: none;
+  padding: 0;
+}
+.header .searchbar .searchicon i {
+  font-weight: 100;
+  padding: 12px 14px;
+}
+.header .myaccount {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header .myaccount span,
+.header .myaccount a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.menubar {
+  display: grid;
+  grid-template-columns: 150px 4fr 1fr;
+  grid-template-rows: 40px;
+  margin-inline-start: 30px;
+}
+.menubar .category {
+  background-color: #FFC423;
+  font-size: 14px;
+  color: #000000;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.menubar .menuitem {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.menubar .menuitem .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menubar .menuitem .list .item {
+  list-style: none;
+}
+.menubar .menuitem .list a {
+  text-decoration: none;
+  text-align: left;
+  color: #000;
+  font-size: 12px;
+  padding: 0 10px;
+}
+.menubar .mycart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.menubar .mycart .btn-mycart {
+  background-color: #FFC423;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0;
+  height: 52px;
+  position: absolute;
+  top: -12px;
+}
+.menubar .mycart .btn-mycart .list {
+  padding: 0 10px;
+}
+.menubar .mycart .btn-mycart .list a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+.menubar .mycart .btn-mycart i {
+  font-size: 22px;
+  margin: 0 14px;
+}
+
+.submenu {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 40px;
+  background-color: #E8E8E8;
+}
+.submenu .list {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-inline-start: 44px;
+}
+.submenu .list .item {
+  list-style: none;
+}
+.submenu .list .item a, .submenu .list .item i {
+  text-decoration: none;
+  color: #757575;
+  font-size: 12px;
+  margin: 0px 3px;
+}
+
+.category-card {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 40px;
+  gap: 23px;
+}
+.category-card .card-details {
+  border: 1px solid black;
+}
+
+.hero-section .hero-container {
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  grid-template-rows: 360px;
+  background: transparent radial-gradient(closest-side at 26% 35%, #EAF4F9 0%, #BBE0F0 100%) 0% 0% no-repeat padding-box;
+}
+.hero-section .hero-container .hero-leftside {
+  margin-inline-start: 100px;
+  background: transparent url("./../images/hero-image.JPG") 0% 0% no-repeat padding-box;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+.hero-section .hero-container .hero-rightside {
+  margin-inline-start: 80px;
+}
+.hero-section .hero-container .hero-rightside .title {
+  display: inline-block;
+  padding: 0 41px;
+  font-size: 35px;
+  font-family: "Roboto Slab", "ExtraBold";
+  font-weight: 800;
+  background-color: #ffffff;
+  line-height: 1.3;
+  position: relative;
+}
+.hero-section .hero-container .hero-rightside .title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 45px solid white;
+  border-right: 45px solid;
+  width: 0;
+}
+
+.main-container {
+  margin-left: 30px;
+  margin-right: 25px;
+  margin-top: 70px;
+}
+.main-container .all-btns {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: 80px;
+  gap: 23px;
+}
+.main-container .all-btns .bt-font {
+  font-size: 35px;
+}
+
+body {
+  font-family: "Rubik", "Regular";
+}
