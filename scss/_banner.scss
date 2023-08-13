@@ -1,8 +1,15 @@
 .banner-section {
     margin-top: 40px;
     .banner-container {
-       display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24px;
+        .banner-img {
+            img {
+                width: 100%;
+            }
+        }
+        
        
-       flex-wrap: wrap;
     }
 }

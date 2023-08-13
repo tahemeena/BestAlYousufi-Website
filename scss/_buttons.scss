@@ -1,10 +1,9 @@
-
 .btn {
-    border: none;
-    //padding: 13px 46px;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 5px;
+  border: none;
+  //padding: 13px 46px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
 .btn-red {
@@ -14,39 +13,70 @@
 
 
 }
+
 .btn-yellow {
-    background-color: $yellow;
-    color: $black;
-    text-transform: uppercase;
+  background-color: $yellow;
+  color: $black;
+  text-transform: uppercase;
 
-  }
-  .btn-padding {
-    padding: 14px 16px;
-  }
-  .btn-shop-yellow{
-   
-    font-size: 16px;
-    
-  }
+}
+
+.btn-padding {
+  padding: 14px 16px;
+}
+
+.btn-shop-yellow {
+
+  font-size: 16px;
+
+}
+
 .btn-blue {
-  background-color:$blue;
-    color: $black;
-    text-transform: uppercase;
+  background-color: $blue;
+  color: $black;
+  text-transform: uppercase;
 
 
 }
+
 .btn-black {
-    background-color: $black;
-    color: $white;
+  background-color: $black;
+  color: $white;
 }
+
 .btn-white {
   background-color: $originalwhite;
-    color: $black;
-    border: 1px solid $greywhite;
+  color: $black;
+  border: 1px solid $greywhite;
 
 }
+
 .btn-fonts {
   font-size: 20px;
-   font-weight: 700;
-  }
+  font-weight: 700;
+}
 
+.title-margin {
+  color: #B7B7B7;
+  margin-bottom: 21px;
+}
+
+.footer-para {
+  font-size: 12px;
+  color: #B7B7B7;
+  text-decoration: none;
+
+}
+
+.item-style {
+  list-style: none;
+}
+
+.service-btn {
+  text-transform: capitalize;
+  padding: 10px 8px;
+  text-decoration: none;
+  font-size: 12px;
+  width: 120px;
+  border-radius: 5px;
+}

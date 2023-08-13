@@ -15,26 +15,34 @@
         }
         .hero-rightside {
             margin-inline-start: 80px;
-            
-            .title {
-                display: inline-block;
-                padding: 0 41px;
-                font-size:35px;
-                font-family: 'Roboto Slab','ExtraBold';
-                font-weight: 800;
-                background-color: #ffffff;
-                line-height: 1.3;
-                position: relative;
+            .hero-title {
+                position: absolute;
+                transform: skew(30deg);
+
+                .title {
+                    display: inline-block;
+
+                    padding: 0 41px;
+                    font-size:35px;
+                    font-family: 'Roboto Slab','ExtraBold';
+                    font-weight: 800;
+                    background-color: #ffffff;
+                    line-height: 1.3;
+                    position: relative;
+
+                    
+                }
             }
-            .title::before {
-                content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-top: 45px solid white;
-        border-right: 45px solid;
-        width: 0;
-            }
+           
+        //     .title::before {
+        //         content: '';
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // border-top: 45px solid white;
+        // border-right: 45px solid black;
+        // width: 0;
+        //     }
         //     .title::before {
         //         content: '';
         // position: absolute;
