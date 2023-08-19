@@ -80,52 +80,58 @@
   border-radius: 5px;
 }
 
-.header {
+.grid-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.grid-container .header {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 80px;
   align-items: center;
   background-color: #E30613;
 }
-.header .logo img {
+.grid-container .header .logo img {
   width: 120px;
 }
-.header .searchbar {
+.grid-container .header .searchbar {
   display: flex;
 }
-.header .searchbar .search-cnt {
+.grid-container .header .searchbar .search-cnt {
   flex-grow: 1;
   padding: 12px;
   border: none;
 }
-.header .searchbar .searchicon {
+.grid-container .header .searchbar .searchicon {
   background-color: #FFC423;
   border: none;
   padding: 0;
 }
-.header .searchbar .searchicon i {
+.grid-container .header .searchbar .searchicon i {
   font-weight: 100;
   padding: 12px 14px;
 }
-.header .myaccount {
+.grid-container .header .myaccount {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.header .myaccount span,
-.header .myaccount a {
+.grid-container .header .myaccount span,
+.grid-container .header .myaccount a {
   color: #F6F6F6;
   font-size: 16px;
   text-decoration: none;
 }
-
-.menubar {
+.grid-container .menubar {
   display: grid;
   grid-template-columns: 150px 4fr 1fr;
   grid-template-rows: 40px;
   margin-inline-start: 30px;
 }
-.menubar .category {
+.grid-container .menubar .category {
   background-color: #FFC423;
   font-size: 14px;
   color: #000000;
@@ -134,33 +140,33 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.menubar .menuitem {
+.grid-container .menubar .menuitem {
   display: flex;
   justify-content: left;
   align-items: center;
 }
-.menubar .menuitem .list {
+.grid-container .menubar .menuitem .list {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.menubar .menuitem .list .item {
+.grid-container .menubar .menuitem .list .item {
   list-style: none;
 }
-.menubar .menuitem .list a {
+.grid-container .menubar .menuitem .list a {
   text-decoration: none;
   text-align: left;
   color: #000000;
   font-size: 12px;
   padding: 0 10px;
 }
-.menubar .mycart {
+.grid-container .menubar .mycart {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.menubar .mycart .btn-mycart {
+.grid-container .menubar .mycart .btn-mycart {
   background-color: #FFC423;
   display: flex;
   justify-content: center;
@@ -171,36 +177,35 @@
   position: absolute;
   top: -12px;
 }
-.menubar .mycart .btn-mycart .list {
+.grid-container .menubar .mycart .btn-mycart .list {
   padding: 0 10px;
 }
-.menubar .mycart .btn-mycart .list a {
+.grid-container .menubar .mycart .btn-mycart .list a {
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   color: #000000;
 }
-.menubar .mycart .btn-mycart i {
+.grid-container .menubar .mycart .btn-mycart i {
   font-size: 22px;
   margin: 0 14px;
 }
-
-.submenu {
+.grid-container .submenu {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 40px;
   background-color: #E8E8E8;
 }
-.submenu .list {
+.grid-container .submenu .list {
   display: flex;
   justify-content: left;
   align-items: center;
   margin-inline-start: 44px;
 }
-.submenu .list .item {
+.grid-container .submenu .list .item {
   list-style: none;
 }
-.submenu .list .item a, .submenu .list .item i {
+.grid-container .submenu .list .item a, .grid-container .submenu .list .item i {
   text-decoration: none;
   color: #757575;
   font-size: 12px;
@@ -330,7 +335,6 @@
 .pdp-section .rightside-container .product-desc .gift-offers {
   display: flex;
   font-size: 12px;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 18px;
 }
@@ -342,8 +346,18 @@
   color: black;
   font-size: 16px;
 }
-.pdp-section .rightside-container .product-desc .gift-offers .gift-wrap span {
-  font-weight: 700;
+.pdp-section .rightside-container .product-desc .gift-offers .express-hr i {
+  color: #FF9F00;
+  font-size: 16px;
+  margin-left: 18px;
+}
+.pdp-section .rightside-container .product-desc .gift-offers .installment-offer i {
+  color: #FF9F00;
+  font-size: 16px;
+  margin-left: 18px;
+}
+.pdp-section .rightside-container .product-desc .gift-offers .installment-offer span {
+  font-weight: 600;
 }
 .pdp-section .rightside-container .product-desc form {
   display: flex;
@@ -406,6 +420,7 @@
   box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1607843137);
   flex: 3;
   padding: 17px 30px 0 25px;
+  padding-bottom: 132px;
 }
 .pdp-section .rightside-container .product-warranty .warranty-title {
   margin-bottom: 15px;

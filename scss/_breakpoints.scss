@@ -1,0 +1,18 @@
+$small: 460px;
+$medium: 768px;
+$large: 920px;
+$x-large:1200px;
+
+ .pdp-section{
+    .pdp-container {
+        @media screen and (max-width: $small) {
+            
+        }
+        // @media screen and (min-width: $medium) {
+        //   //do Smth
+        // }
+      }
+      
+
+    }
+  //some CSS
