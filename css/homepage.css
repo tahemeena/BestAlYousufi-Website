@@ -80,13 +80,6 @@
   border-radius: 5px;
 }
 
-.grid-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
 .grid-container .header {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;

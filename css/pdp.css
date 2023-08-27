@@ -80,13 +80,6 @@
   border-radius: 5px;
 }
 
-.grid-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
 .grid-container .header {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
@@ -510,4 +503,17 @@
 .pdp-section .product-desc-section .product-description .product-details .product-features .features .item a {
   font-weight: normal;
   color: #707070;
+}
+
+@media screen and (max-width: 460px) {
+  .pdp-section .pdp-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .grid-container {
+    width: 100%;
+  }
 }

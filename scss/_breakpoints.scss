@@ -3,16 +3,24 @@ $medium: 768px;
 $large: 920px;
 $x-large:1200px;
 
+
  .pdp-section{
     .pdp-container {
         @media screen and (max-width: $small) {
+            // width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+          
             
         }
-        // @media screen and (min-width: $medium) {
-        //   //do Smth
-        // }
+       
       }
       
 
     }
-  //some CSS
+  
+    .grid-container {
+      @media screen and (max-width: $small) {
+        width: 100%;
+    }
+  }
