@@ -32,7 +32,7 @@ for(i=0;i<=arr2.length;i++){
 
 var num = [200,100,2,45,56,80];
 
-for (i=0 ; i<num.length; i++){
+for (i=0 ; i<num.length; i++) {
     
     if(num[i]> )
 }
