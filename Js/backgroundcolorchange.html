@@ -5,11 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background color change randomly</title>
 </head>
+
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+    .color-change {
+        padding: 10px;
+        font-size: 40px;
+    }
+    .btn , .click-btn {
+        padding: 20px 40px;
+        border: none;
+        background-color:grey;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+    .counter-app{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+ 
+</style>
 <body>
     <div class="container">
-        <h1 class="color-chnage">Background color = <span id="color-span">#f0f0f0f</span></h1>
-        <button class="btn" id="color-btn"> Click me</button>
+        <h1 class="color-change">Background color = <span id="color-span">#f0f0f0f</span></h1>
+        <button class="click-btn" id="color-btn"> Click me</button>
+
+       
     </div>
+
+    <div class="counter-app"> 
+        <h1 id="counter-id"> 0</h1>
+        <div class="btn-grp">
+        <button class="btn increment" >Increment</button>
+        <button class="btn reset" >Reset</button>
+        <button class="btn decrement" >Decrement</button>
+        </div>
+
+    </div>
+
+    
+
+    
 
     <script src="./backgroundcolorchange.js">
 
