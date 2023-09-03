@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Accordian</title>
+</head>
+
+<style>
+    body {
+  background-color: #0A2344;
+  font-family: 'rubik', sans-serif;
+}
+ 
+h1 {
+  text-align: center;
+}
+
+.accordion {
+  width: 800px;
+  margin: 90px auto;
+  color: black;
+  background-color: white;
+  padding: 45px 45px;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.accordion .label::before {
+  content: '+';
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 30px;
+}
+
+.accordion .content {
+  position: relative;
+  background: white;
+  height:0;
+  font-size: 20px;
+  width: 780px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+
+.accordion .container.active .content {
+  height: 100px;
+}
+
+.accordion .container.active .label::before {
+  content: '-';
+  font-size: 30px;
+}
+</style>
+<body>
+
+    <div class="accordion-body">
+        <div class="accordion">
+          <h1>Accordian</h1>
+          
+          <div class="container">
+            <div class="label">Java script Classess</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, aliquam.</div>
+          </div>
+        
+          <div class="container">
+            <div class="label">HTML Content</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, aliquam.</div>
+          </div>
+
+          <div class="container">
+            <div class="label">CSS Styling</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, aliquam.</div>
+          </div>  
+          </div>
+          
+          
+        </div>
+     </div>
+      
+        <script src="./accrordian.js"></script>
+    
+     
+      
+      
+</body>
+</html>
