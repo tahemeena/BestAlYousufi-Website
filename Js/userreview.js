@@ -31,60 +31,123 @@ const reviews = [
 ];
 
 
-var img = document.querySelector('#person-img');
-var author = document.querySelector('#author');
-var job = document.querySelector('#job');
-var info = document.querySelector('#info');
-
-var prevbtn = document.querySelector('.prev-btn');
-var nextbtn = document.querySelector('.next-btn');
-var buttons = document.querySelectorAll('.btn');
-var randombtn = document.querySelector('.random-btn')
-
 let currentItem = 0;
+const prevbtn = document.querySelector('.prev-btn');
+const nextbtn = document.querySelector('.next-btn');
+
+
+var img = document.getElementById('person-img');
+var author = document.getElementById('author');
+var job = document.getElementById('job');
+var info = document.getElementById('info');
+
 
 window.addEventListener("DOMContentLoaded", () => {
-    showPerson(currentItem);
-  });
+    showReview(currentItem);
+    enableDisableButtons()
+    prevbtn.addEventListener('click', goBack);
+    nextbtn.addEventListener('click', goNext)
 
-  function showPerson(item) {
+});
+
+function enableDisableButtons() {
+
+    if(currentItem == 0) {
+        prevbtn.setAttribute('disabled','disabled');
+    }else
+    prevbtn.removeAttribute('disabled');
+
+    if(currentItem == reviews.length-1) {
+        nextbtn.setAttribute('disabled','disabled');
+    }
+    else {
+        nextbtn.removeAttribute('disabled');
+    }
+}
+
+function goNext() {
+    currentItem++;
+
+    console.log(currentItem);
+
+    showReview(currentItem);
+    enableDisableButtons();
+}
+
+function goBack() {
+    currentItem--;
+    showReview(currentItem);
+
+    console.log(currentItem)
+}
+
+
+  function showReview(item) {
     img.src = reviews[item].img;
     console.log(img.src);
     author.textContent = reviews[item].name;
     job.textContent = reviews[item].job;
     info.textContent = reviews[item].text;
+  }
+
+
+// var img = document.querySelector('#person-img');
+// var author = document.querySelector('#author');
+// var job = document.querySelector('#job');
+// var info = document.querySelector('#info');
+
+// var prevbtn = document.querySelector('.prev-btn');
+// var nextbtn = document.querySelector('.next-btn');
+// var buttons = document.querySelectorAll('.btn');
+// var randombtn = document.querySelector('.random-btn')
+
+// let currentItem = 0;
+
+// window.addEventListener("DOMContentLoaded", () => {
+//     showPerson(currentItem);
+//   });
+
+//   function showPerson(item) {
+//     img.src = reviews[item].img;
+//     console.log(img.src);
+//     author.textContent = reviews[item].name;
+//     job.textContent = reviews[item].job;
+//     info.textContent = reviews[item].text;
     
   
-  }
+//   }
   
-buttons.forEach((btn)=> {
-    btn.addEventListener('click', function(e) {
-        var style = this.classList;
-           console.log(style);
+// buttons.forEach((btn)=> {
+//     btn.addEventListener('click', function(e) {
+//         var style = this.classList;
+//            console.log(style);
 
-           if(style.contains = ('next-btn') ){
-              if(currentItem < reviews.length-1) {
-                currentItem++;
-                showPerson(currentItem);
-              }
-              else {
-                currentItem--;
-                showPerson(currentItem);
-                   currentItem = 0;
-              }
+//            if(style.contains = ('next-btn') ){
+//               if(currentItem < reviews.length-1) {
+//                 currentItem++;
+//                 showPerson(currentItem);
+//                 if(currentItem > 0) {
+//                     prevbtn.ariaDisabled;
+//                 }
+//               }
+//               else {
+//                 currentItem--;
+//                 showPerson(currentItem);
+//                    currentItem = 0;
+//               }
               
-           }
-    });
-});
+//            }
+//     });
+// });
   
-randombtn.addEventListener('click', () => {
-    getRandom();
+// randombtn.addEventListener('click', () => {
+//     getRandom();
 
-})
+// })
 
-function getRandom() {
-    currentItem = Math.floor(Math.random() * reviews.length);
-    showPerson(currentItem);
-    console.log(currentItem);
-}
+// function getRandom() {
+//     currentItem = Math.floor(Math.random() * reviews.length);
+//     showPerson(currentItem);
+//     console.log(currentItem);
+// }
 
