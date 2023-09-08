@@ -1,86 +1,172 @@
 body  {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .container {
-  width: 1201px;
-  margin: 0 auto;
+width: 1440px;
+margin: 0 auto;
 }
 .navigation {
-    background-color: red;
+  background-color:black;
+  height: 100px;
+  color: white;
+  display: grid;
+  grid-template-columns:1fr 3fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  position: relative; 
+  width: 80px; 
+  height: 80px; 
+  overflow: hidden; 
+  border-radius: 50%;
+}
+img {
+  width: 100%; height: auto;
+}
+.search-bar {
+  display: grid;
+  grid-template-columns:4fr 1fr;
+}
+.search-bar input {
+  padding: 10px;
+font-size: 17px;
+border: 1px solid grey;
+background: #f1f1f1;
+}
+.search-bar .btn {
+  padding: 10px;
+  background: pink;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+.my-account {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.my-account a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.my-account a:hover {
+  color: red;
+}
+.product-details {
+display: grid;
+grid-template-columns: 1fr 4fr;
 }
 .product-card {
-    display: grid;
-    grid-template-columns:1fr 3fr;
+  /* display: grid;
+  grid-template-columns:1fr 3fr; */
+  display: flex;
+  flex-direction: column;
+}
+.product-details{
+  margin-top: 50px;
+}
+.product-banner img {
+  width: 100%;
+  height: 400px;
+}
+.product-desc {
+  display: flex;
+  flex-direction: row;
 }
 .product-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;    
 
 }
 .product-info {
-   /* display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center; */
-   margin-top: 50px;
-   border-radius: 10px 10px;
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1019607843);
-   position: relative;
-   
-   
+ border-radius: 10px 10px;
+ box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1019607843);
+ position: relative;
+ 
 }
 
 .product-img {
-    width: 300px;
-    background-color: grey;
+  
 }
 .product-img img {
-    width: 100%;
+  max-width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
 }
+
+
   
-  .accordion {
-    width: 100%;
-    color: black;
-    background-color: white;
-    padding:10px;
-  }
-  
-  .accordion .label {
-    position: relative;
-    padding: 10px 0;
-    font-size: 16px;
-    color: black;
-    cursor: pointer;
-  }
-  
-  .accordion .label::before {
-    content: '+';
-    color: black;
-    position: absolute;
-    top: 25%;
-    right: 15px;
-    font-size: 20px;
-  }
-  
-  .accordion .content {
-    position: relative;
-    background: white;
-    height:0;
-    font-size: 20px;
-    width: 100px;
-    overflow: hidden;
-    transition: 0.5s;
-  }
-  
-  
-  .accordion .acc-container.active .content {
-    height: 30px;
-  }
-  
-  .accordion .acc-container.active .label::before {
-    content: '-';
-    font-size: 20px;
-  }
+.product-content {
+  padding: 30px;
+}  
+.product-brand {
+  margin: 10px 0;
+}
+.product-title {
+  margin-bottom: 10px;
+}
+.product-desc , .product-price , .product-discount, .product-category {
+  margin-bottom: 10px;
+}
+.btns {
+  /* text-align: center; */
+}
+.add-btn {
+  padding: 10px 60px;
+  background-color: black;
+  color: white;
+}
+.accordion {
+  width: 100%;
+  color: black;
+  background-color: white;
+  padding:10px;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+}
+
+.accordion .label::before {
+  content: '+';
+  color: black;
+  position: absolute;
+  top: 25%;
+  right: 15px;
+  font-size: 20px;
+}
+
+.accordion .content {
+  position: relative;
+  background: white;
+  height:0;
+  font-size: 20px;
+  width: 100px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+
+.accordion .acc-container.active .content {
+  height: 30px;
+}
+
+.accordion .acc-container.active .label::before {
+  content: '-';
+  font-size: 20px;
+}

@@ -6,13 +6,15 @@ async function fetchDataJSON() {
 
 var results = 0;
 var productList = document.querySelector('.product-list');
-var productCard = document.querySelector('.product-card');
+var productDetails = document.querySelector('.product-details');
 var categoryList = document.querySelector('.list');
 var brandList = document.querySelector('.brand-list');
 
+
+
 fetchDataJSON().then(data => {
   
-  productCard.append(productList);
+  productDetails.append(productList);
    
   let productHTML = showData(data);
   productList.innerHTML = productHTML;
@@ -26,18 +28,24 @@ function showData(data) {
   let brands = [];
 
   data.products.forEach(product => {
+     
       productHTML = productHTML +     `
+      
       <div class="product-info">
       <div class="product-img"><img src="${product.thumbnail}" /></div>
-              <div>${product.id}</div>
-              <div>${product.title}</div>
-              <div>${product.description}</div>
-              <div>${product.price}</div>
-              
-              <div>${product.discountPercentage}</div>
-              <div>${product.brand}</div>
-              <div>${product.category}</div>
+      <div class="product-content">
+      <div class="product-brand">${product.brand}</div>
+      <div class="product-title">${product.title}</div>
+      <div class="product-price">$${product.price}</div>
+      <div class="product-discount">${product.discountPercentage}%</div>
+      <div class="product-category">${product.category}</div>
+      <div class="btns"><button class="btn add-btn">Add to cart</button></div>
+
       </div>
+
+            
+      </div>
+
       `
       if(!categories.includes(product.category)) {
         categories.push(product.category);
@@ -108,35 +116,6 @@ for (i=0; i<accordion.length; i++) {
     this.classList.toggle('active')
   })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
