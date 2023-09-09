@@ -9,6 +9,8 @@ var productList = document.querySelector('.product-list');
 var productDetails = document.querySelector('.product-details');
 var categoryList = document.querySelector('.list');
 var brandList = document.querySelector('.brand-list');
+var totalproducts = document.querySelector('.product-features');
+var listView = document.querySelector('.btn-listview');
 
 
 
@@ -36,8 +38,8 @@ function showData(data) {
       <div class="product-content">
       <div class="product-brand">${product.brand}</div>
       <div class="product-title">${product.title}</div>
-      <div class="product-price">$${product.price}</div>
-      <div class="product-discount">${product.discountPercentage}%</div>
+      <div class="product-price"> Price: $${product.price}</div>
+      <div class="product-discount"> Discount: ${product.discountPercentage}%</div>
       <div class="product-category">${product.category}</div>
       <div class="btns"><button class="btn add-btn">Add to cart</button></div>
 
@@ -55,9 +57,10 @@ function showData(data) {
         brands.push(product.brand);
       }
       
+      
   });
   
-  // console.log(data);
+  console.log(data.products.length);
   // console.log(categories);
   // console.log(brands);
  
@@ -68,6 +71,7 @@ function showData(data) {
 
    let productBrands = showProductsBrands(brands);
    brandList.innerHTML = productBrands;
+   
    
 
   return productHTML;
@@ -92,6 +96,7 @@ function showProductCategories(cats) {
 
 
 function showProductsBrands(brands) {
+
   console.log(brands);
 
   let productBrands ='';
@@ -105,7 +110,14 @@ function showProductsBrands(brands) {
  return productBrands;
 }
 
-
+listView.addEventListener('click', function() {
+  
+  console.log(productList);
+  productList.classList.toggle('listview');
+  var viewIcon = document.querySelector('.js-view-icon');
+  viewIcon.classList.toggle('fa-th');
+  viewIcon.classList.toggle('fa-list');
+  });
 
 
 

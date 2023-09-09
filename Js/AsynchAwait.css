@@ -105,7 +105,14 @@ grid-template-columns: 1fr 4fr;
   -o-border-radius: 10px 10px 0 0;
 }
 
-
+.product-features {
+  text-align: end;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.product-features span {
+  margin: 100px;
+}
   
 .product-content {
   padding: 30px;
@@ -127,11 +134,44 @@ grid-template-columns: 1fr 4fr;
   background-color: black;
   color: white;
 }
+.product-category .list .item , .product-brand .brand-list .item{
+   list-style: none;
+   margin: 10px;
+}
+.product-category .list .item a , .product-brand .brand-list .item a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+
+}
+.product-category .list .item a:hover , .product-brand .brand-list .item a:hover {
+  text-decoration: underline;
+  color: grey;
+}
+
+.listview {
+   display: flex;
+   flex-direction: column;
+}
+
+.listview .product-info {
+  display: flex;
+}
+
+.btn-listview {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.btn-listview:hover {
+   color: red;
+}
+
 .accordion {
   width: 100%;
   color: black;
   background-color: white;
-  padding:10px;
+  
 }
 
 .accordion .label {
