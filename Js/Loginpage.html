@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./AsynchAwait.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="container">
+        <section class="hedaer-section">
+            <header class="navigation">
+                <div class="logo">
+                    <img src="./images/logo-mobile.jpg" alt="">
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <button class="btn"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="my-account">
+                    <div class="my-login"><a href="./Loginpage.html">My Login</a></div>
+                    <div class="about-us"><a href="">About us</a></div>
+
+
+                </div>
+            </header>
+        </section>
+
+    <section class="login-page">
+        <div class="user-login">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <h1 class="title"> Login 
+                 
+                </h1>
+            
+                <div class="container-login">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+            
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                    
+                  <button  type="submit" class="btn-login">Login </button>
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
+
+                  <div class="container-login" style="background-color:white">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                  </div>
+                </div>
+            
+                
+              </form>
+        </div>
+    </section>
+    
+    <script src="./loginpage.js"></script>
+</body>
+</html>
