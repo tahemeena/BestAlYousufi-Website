@@ -6,6 +6,51 @@ var categoryList = document.querySelector('.list');
 var brandList = document.querySelector('.brand-list');
 var listView = document.querySelector('.btn-listview');
 var totalproducts = document.querySelector('.total-products');
+var productCard = document.querySelector('.product-card');
+var loginPage = document.querySelector('.login-page');
+
+
+function showLogin() {
+  loginPage.style.display = 'block';
+
+}
+
+
+
+function showProductListing() {
+
+}
+
+
+
+//login page
+
+function userLogin() {
+  fetch('https://dummyjson.com/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+
+      username: 'kminchelle',
+      password: '0lelplR',
+
+    })
+  })
+    .then(res => res.json())
+    .then(result => {
+      
+      loginPage.style.display = 'none';
+      productCard.style.display = 'block'
+
+      JsonData();
+
+
+    });
+
+
+}
+
+
 
 async function fetchDataJSON() {
   const response = await fetch('https://dummyjson.com/products');
@@ -13,28 +58,31 @@ async function fetchDataJSON() {
   return dummydata;
 }
 
-fetchDataJSON().then(data => {
+function JsonData() {
 
-  console.log('fetchDataJSON', data);
-  AllProducts = data.products;
-  
-  productDetails.append(productList);
-   
-  let productHTML = showData(data.products);
-  productList.innerHTML = productHTML;
+  fetchDataJSON().then(data => {
 
-  let totalcount = showTotalcount(data);
-  totalproducts.innerHTML = totalcount;
+    console.log('fetchDataJSON', data);
+    AllProducts = data.products;
 
-  showCategories(data.products);
-   
-});
+    productDetails.append(productList);
 
+    let productHTML = showData(data.products);
+    productList.innerHTML = productHTML;
 
+    let totalcount = showTotalcount(data);
+    totalproducts.innerHTML = totalcount;
 
+    showCategories(data.products);
+
+  });
+
+}
+
+//JsonData();
 
 function showTotalcount(data) {
-   return data.products.length;
+  return data.products.length;
 }
 
 
@@ -44,28 +92,28 @@ function showCategories(products) {
   let brands = [];
 
   products.forEach(product => {
-    
-    if(!categories.includes(product.category)) {
+
+    if (!categories.includes(product.category)) {
       categories.push(product.category);
     }
-    
-    if(!brands.includes(product.brand)) {
+
+    if (!brands.includes(product.brand)) {
       brands.push(product.brand);
     }
-  
-});
+
+  });
 
 
 
-let productCategory = showProductCategories(categories);
- categoryList.innerHTML = productCategory;
+  let productCategory = showProductCategories(categories);
+  categoryList.innerHTML = productCategory;
 
 
- let productBrands = showProductsBrands(brands);
- brandList.innerHTML = productBrands;
- 
- eventbind();
- soretedData();
+  let productBrands = showProductsBrands(brands);
+  brandList.innerHTML = productBrands;
+
+  eventbind();
+  soretedData();
 
 }
 
@@ -74,8 +122,8 @@ function showData(products) {
   let productHTML = '';
 
   products.forEach(product => {
-    
-      productHTML = productHTML +     `
+
+    productHTML = productHTML + `
       
       <div class="product-info">
       <div class="product-img"><img src="${product.thumbnail}" /></div>
@@ -93,26 +141,22 @@ function showData(products) {
       </div>
 
       `
-    
   });
-  
-
   return productHTML;
-  
 }
 
 
 function showProductCategories(cats) {
-  
-  let productCategory ='';
 
-   cats.forEach(cat => {
-     
+  let productCategory = '';
+
+  cats.forEach(cat => {
+
     productCategory = productCategory + `<li class="item"> <a href="" >${cat}</a></li>`;
 
-   });
+  });
 
- return productCategory;
+  return productCategory;
 }
 
 
@@ -120,25 +164,25 @@ function showProductsBrands(brands) {
 
   // console.log(brands);
 
-  let productBrands ='';
+  let productBrands = '';
 
-   brands.forEach(brand => {
-     
+  brands.forEach(brand => {
+
     productBrands = productBrands + `<li class="item"> <a href="" >${brand}</a></li>`;
 
-   });
-  
- return productBrands;
+  });
+
+  return productBrands;
 }
 
-listView.addEventListener('click', function() {
-  
-  // console.log(productList);
-  productList.classList.toggle('listview');
-  var viewIcon = document.querySelector('.js-view-icon');
-  viewIcon.classList.toggle('fa-th');
-  viewIcon.classList.toggle('fa-list');
-  });
+// listView.addEventListener('click', function () {
+
+//   // console.log(productList);
+//   productList.classList.toggle('listview');
+//   var viewIcon = document.querySelector('.js-view-icon');
+//   viewIcon.classList.toggle('fa-th');
+//   viewIcon.classList.toggle('fa-list');
+// });
 
 function eventbind() {
 
@@ -146,80 +190,106 @@ function eventbind() {
 
   document.querySelectorAll('.item').forEach(item => {
 
-    item.children[0].addEventListener('click',function(ele){
-        ele.preventDefault();
+    item.children[0].addEventListener('click', function (ele) {
+      ele.preventDefault();
 
-        currentTxt = this.textContent;
-        filterByCategory(currentTxt);
+      currentTxt = this.textContent;
+      filterByCategory(currentTxt);
     })
 
 
   });
- 
+
 
 }
 
-  function filterByCategory(currentCategory) {
+function filterByCategory(currentCategory) {
 
-    console.log('current category: ', currentCategory);
+  console.log('current category: ', currentCategory);
 
-    let filteredProducts = AllProducts.filter(item => item.category === currentCategory ? item: null)
-    console.log(filteredProducts);
-   
-    let productHTML = showData(filteredProducts);
-    productList.innerHTML = productHTML;
-  }
+  let filteredProducts = AllProducts.filter(item => item.category === currentCategory ? item : null)
+  console.log(filteredProducts);
 
- 
+  let productHTML = showData(filteredProducts);
+  productList.innerHTML = productHTML;
+}
 
-  function soretedData() {
 
-    var currentData = '';
-  
-    document.querySelectorAll('.sortprice').forEach(item => {
-  
-      item.addEventListener('click',function(ele){
-          ele.preventDefault();
-  
-          currentData = this.textContent;
-          sortByPrice(currentData);
-      })
-  
-  
+
+function soretedData() {
+
+  var currentData = '';
+
+  document.querySelectorAll('.sortprice').forEach(item => {
+
+    item.addEventListener('click', function (ele) {
+      ele.preventDefault();
+
+      currentData = this.textContent;
+      sortByPrice(currentData);
+    })
+
+
+  });
+
+
+}
+
+function sortByPrice(parVal) {
+
+  let result;
+
+  if (parVal === 'high') {
+    result = AllProducts.sort((a, b) => {
+
+
+      return console.log(b.price - a.price);
     });
-   
-  
   }
+  else {
+    result = AllProducts.sort((a, b) => {
+      return a.price - b.price
 
-  function sortByPrice(parVal) {
-
-    let result;
-
-    if(parVal === 'high'){
-      result = AllProducts.sort((a,b) => {
-
-        
-        return console.log( b.price - a.price);  
-      });
-    }
-    else{
-      result = AllProducts.sort((a,b)=>{
-        return a.price - b.price  
-         
-      });
-      let productHTML = showData(result);
+    });
+    let productHTML = showData(result);
     productList.innerHTML = productHTML;
-    }
-    
   }
 
+}
 
-const accordion = document.getElementsByClassName('acc-container');
 
-for (i=0; i<accordion.length; i++) {
-  accordion[i].addEventListener('click', function () {
-    this.classList.toggle('active');
+// const accordion = document.getElementsByClassName('acc-container');
+
+// for (i = 0; i < accordion.length; i++) {
+//   accordion[i].addEventListener('click', function () {
+//     this.classList.toggle('active');
+//   })
+// }
+
+
+
+
+
+// initialize
+
+
+window.onload = function () {
+
+  // hide both login and productlisting section
+
+  productCard.style.display = 'none';
+  loginPage.style.display = 'none';
+
+  showLogin();
+
+  var btnLogin = document.querySelector('.btn-login');
+
+  btnLogin.addEventListener('click', function (e) {
+    e.preventDefault();
+    userLogin();
+
   })
+
 }
 
 
@@ -231,4 +301,3 @@ for (i=0; i<accordion.length; i++) {
 
 
 
- 

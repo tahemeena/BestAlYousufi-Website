@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,10 @@
     <link rel="stylesheet" href="./AsynchAwait.css">
     <title>Asynch Await Prog</title>
 </head>
+
 <body>
 
-    
+
 
     <div class="container">
         <section class="hedaer-section">
@@ -31,6 +33,38 @@
             </header>
         </section>
 
+        <section class="login-page">
+            <div class="user-login">
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                    <h1 class="title"> Login
+
+                    </h1>
+
+                    <div class="container-login">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button type="submit" class="btn-login">Login </button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+
+                        <div class="container-login" style="background-color:white">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                                class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </section>
+
+
         <section class="product-card">
             <div class="product-banner">
                 <img src="./images/hero.jpg" alt="">
@@ -48,64 +82,54 @@
                     <div class="product-category">
                         <h3>Category</h3>
                         <ul class="list">
-                          
-                            
+
+
                         </ul>
                     </div>
                     <div class="product-brand">
                         <h3>Brand</h3>
                         <ul class="brand-list">
-    
-    
+
+
                         </ul>
                     </div>
-                    <div class="product-refineby"> 
+                    <div class="product-refineby">
                         <div class="accordion-body">
                             <div class="accordion">
                                 <h3>Refine By</h3>
-    
-                              <div class="acc-container">
-                                <div class="label">Category</div>
-                                <div class="content">Lorem ipsum</div>
-                              </div>
-                            
-                              <div class="acc-container">
-                                <div class="label">Price</div>
-                                <div class="content"> <a class="sortprice   hightolow" href="">High to Low</a></div>
-                                <div class="content"><a class="sortprice lowtohigh" href="">Low to High</a></div>
-                              </div>
-                    
-                              <div class="acc-container">
-                                <div class="label">Reviews</div>
-                                <div class="content">Lorem ipsum</div>
-                              </div>  
-                              </div>
-                              
-                              
+
+                                <div class="acc-container">
+                                    <div class="label">Category</div>
+                                    <div class="content">Lorem ipsum</div>
+                                </div>
+
+                                <div class="acc-container">
+                                    <div class="label">Price</div>
+                                    <div class="content"> <a class="sortprice   hightolow" href="">High to Low</a></div>
+                                    <div class="content"><a class="sortprice lowtohigh" href="">Low to High</a></div>
+                                </div>
+
+                                <div class="acc-container">
+                                    <div class="label">Reviews</div>
+                                    <div class="content">Lorem ipsum</div>
+                                </div>
                             </div>
-                         </div>
-                    </div>
-                        <div class="product-list">
-                        
-                    
+
+
                         </div>
                     </div>
-                    
-                    
                 </div>
-               
-                
+                <div class="product-list">
+
+
+                </div>
             </div>
-           
-            
-             
         </section>
+
     </div>
 
-
-
-
     <script src="./AsynchAwait.js"></script>
-   
+
 </body>
+
 </html>

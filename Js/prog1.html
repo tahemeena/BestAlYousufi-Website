@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./prog1.css">
+    <title>Programmes of Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text-content">
+            <button class="text-btn">Test</button>
+
+            <p id="demo"> This is Javascript.</p>
+        </div>
+    </div>
+
+    <div class="bulb-container">
+        <button class="btn btn-onbulb">  ON</button>
+        <button class="btn btn-offbulb">  OFF</button>
+        <img src="./images/bulb-off.png" class="img-container" alt="">
+    </div>
+    
+    <script>
+
+    //     var text = document.getElementById('demo');
+    //     var textBtn = document.querySelector('.text-btn');
+
+    //  textBtn.addEventListener('click', function(){
+    //     text.innerHTML =" Hello";
+           
+    //  })
+
+     
+      var btns = document.querySelectorAll('.btn');
+   var imgContainer = document.querySelector('.img-container');
+      btns[0].addEventListener('click', function() {
+          console.log(btns[0].classList);
+          var style = this.classList;
+
+          if(style.Content === 'btn-onbulb') {
+            console.log('bulb is on');
+           imgContainer[0].src = "bulb-on.png"
+          }
+          else {
+            console.log('bulb if off');
+          }
+      })
+
+
+    </script>
+</body>
+</html>

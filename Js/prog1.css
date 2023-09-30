@@ -1,0 +1,13 @@
+
+.bulb-container {
+
+    width: 600px;
+    margin: 0 auto;
+}
+.bulb-container img {
+    width: 300px;
+}
+.btn-onbulb , .btn-offbulb {
+    padding: 10px 40px;
+    border-radius: 10px;
+}
