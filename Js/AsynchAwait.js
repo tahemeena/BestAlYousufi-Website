@@ -15,8 +15,6 @@ function showLogin() {
 
 }
 
-
-
 function showProductListing() {
 
 }
