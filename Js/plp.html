@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecommerce Navbar Design</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./plp.css">
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="header">
+            <div class="logo">
+                <img src="./images/best-logo.svg" alt="">
+            </div>
+            <div class="searchbar">
+                <input type="text" class="search-cnt" placeholder="Search" />
+                <button class="searchicon"><i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="myaccount">
+                <span><i class="fa fa-user-o" aria-hidden="true"> </i>
+                    <a href="#">My Account</a></span>
+                <span><i class="fa fa-globe" aria-hidden="true"></i>
+                    <a href="#">Globe</a></span>
+            </div>
+        </div>
+        <div class="menubar">
+            <div class="category">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <span>All Categories</span>
+            </div>
+            <div class="menuitem">
+                <ul class="list">
+                    <li class="item"><a href="#">Weekly E-Flyer</a></li>
+                    <li class="item"><a href="#">Air Conditioners</a></li>
+                    <li class="item"><a href="#">Mobile Phones</a></li>
+                    <li class="item"><a href="#">Refrigerators</a></li>
+                    <li class="item"><a href="#">Gas Cookers</a></li>
+                    <li class="item"><a href="#">Laptops</a></li>
+                    <li class="item"><a href="#">Personal Care</a></li>
+                    <li class="item"><a href="#">TV & Audio</a></li>
+                    <li class="item"><a href="#">Swimming</a></li>
+                    <li class="item"><a href="#">Music</a></li>
+                    <!-- <li class="item"><a href="#">Smart Watches</a></li>
+                <li class="item"><a href="#">Gaming</a></li> -->
+                    <!-- <li class="item"><a href="#">Scooters</a></li>
+                <li class="item"><a href="#">Smart Home</a></li>
+                <li class="item"><a href="#">Trimmers</a></li> -->
+                </ul>
+            </div>
+            <div class="mycart">
+                <button class="btn-mycart "><i name="cart" class="fa fa-shopping-cart cart-icon" id="cart-icon" aria-hidden="true"></i>
+                        <div class="cart-count">0</div>    
+                </button>
+            </div>
+            <div class="cart">
+                <div class="cart-title">Cart Items</div>
+                <div class="cart-content">
+
+
+                </div>
+
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">Rs.0</div>
+                </div>
+
+                <button class="btn-buy">Place Order</button>
+
+                <!-- <ion-icon name="close" id="cart-close"></ion-icon> -->
+                <i class="fa fa-times" name="close" id="cart-close" aria-hidden="true"></i>
+
+
+            </div>
+        </div>
+        <div class="submenu">
+            <ul class="list">
+                <li class="item"><a href="#">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a></li>
+                <li class="item"><a href="#">Home Appliance</a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                <li class="item"><a href="#">Large Appliance</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                </li>
+                <li class="item"><a href="#" class="cooker-color"> Gas Cookers</a></li>
+
+            </ul>
+
+
+        </div>
+
+
+        <!-- New plp -->
+
+        <section class="product-card">
+            <div class="product-details">
+                <div class="applied-filter">
+                    <h4 class="mb-4"><span>Applied Filter</span></h4>
+                    <div class="applied-btn">
+                        <button class="filter-btn">Between</button>
+                        <button class="filter-btn">Media</button>
+                        <button class="filter-btn">HomeApp</button>
+                    </div>
+                </div>
+                <div class="product-features">
+                    <div class="col-md-12 md-title">
+                        <h4 class="mb-4 mb4-title"> <span class="underline-red">Gas Cooker</span><span
+                                class="mb3-title underline-red"> Results (<span class="total-products"></span>)</span>
+                        </h4>
+
+                    </div>
+                    <div class="subheader">
+
+                        <div href="#" class="btn-listview btn-list">
+                            <i class="js-view-icon fa fa-list" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="sort">
+                            <select name="price" id="high" class="sort-dropdown"><i class="fa fa-sort-desc"
+                                    aria-hidden="true"></i>
+                                <option value="audi">Sort By</option>
+                                <option value="price">Price: High to Low</option>
+                                <option value="saab">Price: Low to High</option>
+                                <option value="mercedes">Bestseller</option>
+                                <option value="audi">New Arrivals</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                    <!-- <div class="col-md-12 md-title">
+                        <h4 class="mb-4 mb4-title">Gas Cooker <span class="mb3-title">Results(28)</span></h4>
+                        
+                    </div>
+                    <div class="col-md-12 bg-color"> -->
+                    <div class="mb-4 sort-list">
+                       
+
+
+
+
+                    </div>
+                </div>
+                <div class="product-filter">
+                    <div class="product-category">
+                        <h3 class="cat-title"> <span class="underline-red">Category</span></h3>
+                        <ul class="list">
+                        </ul>
+                    </div>
+                    <div class="product-price product-margin">
+                        <h3 class="price-title"> <span class="underline-red">Price</span> </h3>
+                        <div class="slidecontainer">
+                            <input type="range" min="0" max="50000" value="100" class="slider slider-price"
+                                id="myRange">
+                            <p class="price-para">Price: <span id="demo"></span></p>
+                        </div>
+                    </div>
+                    <div class="product-brand ">
+                        <h3 class="brand-title"> <span class="underline-red">Brand</span></h3>
+                        <ul class="brand-list">
+                        </ul>
+                    </div>
+                    <div class="availability">
+                        <h3 class="available-title"> <span class="underline-red">Availability</span></h3>
+                        <ul class="available-product">
+                            <li class="item"><a href="#"><input type="checkbox"> Online</a></li>
+                            <li class="item"><a href="#"><input type="checkbox">Click & Collect</a></li>
+                        </ul>
+                    </div> 
+                    <div class="user-rating">
+                        <h3 class="rating-title"> <span class="underline-red">Rating</span></h3>
+                        <form class="star-rating">
+                            <input class="radio-input" type="radio" id="star5" name="star-input" value="5" />
+                            <label class="radio-label" class for="star5" title="5 stars">5 stars</label>
+
+                            <input class="radio-input" type="radio" id="star4" name="star-input" value="4" />
+                            <label class="radio-label" for="star4" title="4 stars">4 stars</label>
+
+                            <input class="radio-input" type="radio" id="star3" name="star-input" value="3" />
+                            <label class="radio-label" for="star3" title="3 stars">3 stars</label>
+
+                            <input class="radio-input" type="radio" id="star2" name="star-input" value="2" />
+                            <label class="radio-label" for="star2" title="2 stars">2 stars</label>
+
+                            <input class="radio-input" type="radio" id="star1" name="star-input" value="1" />
+                            <label class="radio-label" for="star1" title="1 star">1 star</label>
+                           
+                        </form>
+                        
+                        
+
+                    </div>
+                </div>
+                <div class="product-list">
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- plp page -->
+
+
+
+
+        <!-- <div class="py-3 py-md-5 plp-container">
+        <div class="container">
+            <div class="product-filter">
+                <div class="product-category">
+                    <h3>Category</h3>
+                    <ul class="list">
+
+
+                    </ul>
+                </div>
+                <div class="product-brand">
+                    <h3>Brand</h3>
+                    <ul class="brand-list">
+
+
+                    </ul>
+                </div>
+                <div class="product-refineby">
+                    <div class="accordion-body">
+                        <div class="accordion">
+                            <h3>Refine By</h3>
+
+                            <div class="acc-container">
+                                <div class="label">Category</div>
+                                <div class="content">Lorem ipsum</div>
+                            </div>
+
+                            <div class="acc-container">
+                                <div class="label">Price</div>
+                                <div class="content"> <a class="sortprice   hightolow" href="">High to Low</a></div>
+                                <div class="content"><a class="sortprice lowtohigh" href="">Low to High</a></div>
+                            </div>
+
+                            <div class="acc-container">
+                                <div class="label">Reviews</div>
+                                <div class="content">Lorem ipsum</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            
+             <div class="row">
+                <div class="col-md-12 md-title">
+                    <h4 class="mb-4 mb4-title">Gas Cooker <span class="mb3-title">Results(28)</span></h4>
+                    
+                </div>
+                <div class="col-md-12 bg-color">
+                    <div class="mb-4 sort-list">
+                        <div class="list-icon">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                        </div>
+                        
+                       <div class="sort">
+                        <select name="price" id="high" class="sort-dropdown"><i class="fa fa-sort-desc" aria-hidden="true"></i>
+                            <option value="audi">Sort By</option>
+                            <option value="price">Price: High to Low</option>
+                            <option value="saab">Price: Low to High</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                            </select>
+                       </div>
+                        
+
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1 add-cart">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T_fridge.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T__.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T_21.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T1211.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/fan.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/EIBS12RIFS.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/EIBS12RIFS.png" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T_21.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T_21.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T_fridge.jpg" alt="Mens Shirt">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">Levis</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Mens Shirt 
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$299</span>
+                                <span class="original-price">$359</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T_21.jpg" alt="Head Phone">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">Asus</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                Head Phone
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$399</span>
+                                <span class="original-price">$499</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card-border">
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <label class="stock bg-success">In Stock</label>
+                            <img src="./images/YL1635T.jpg" alt="Red MI Note 8">
+                        </div>
+                        <div class="product-card-body">
+                            <p class="product-brand">MI</p>
+                            <h5 class="product-name">
+                               <a href="">
+                                    Red MI Note 8
+                               </a>
+                            </h5>
+                            <div>
+                                <span class="selling-price">$200</span>
+                                <span class="original-price">$300</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="" class="btn btn1">Add To Cart</a>
+                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
+                                <a href="" class="btn btn1"> View </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+    </div> -->
+
+        <script src="./plp.js"></script>
+</body>
+
+</html>

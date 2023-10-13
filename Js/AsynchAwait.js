@@ -173,14 +173,14 @@ function showProductsBrands(brands) {
   return productBrands;
 }
 
-// listView.addEventListener('click', function () {
+listView.addEventListener('click', function () {
 
-//   // console.log(productList);
-//   productList.classList.toggle('listview');
-//   var viewIcon = document.querySelector('.js-view-icon');
-//   viewIcon.classList.toggle('fa-th');
-//   viewIcon.classList.toggle('fa-list');
-// });
+  // console.log(productList);
+  productList.classList.toggle('listview');
+  var viewIcon = document.querySelector('.js-view-icon');
+  viewIcon.classList.toggle('fa-th');
+  viewIcon.classList.toggle('fa-list');
+});
 
 function eventbind() {
 
