@@ -3,19 +3,16 @@
 
 var colors =['green','red','blue','lime','brown'];
 
-
-
      var colorbtn = document.getElementById('color-btn');
      var colorspan = document.getElementById('color-span');
      
      
-
-  colorbtn.addEventListener('click',function(){
-
+  colorbtn.addEventListener('click',function() {
+colors
      var randomNum = getRandom();
     document.body.style.backgroundColor= colors[randomNum];
     console.log(colors[randomNum]);
-    colorspan.textContent = colors[randomNum];
+    colorspan.textContent = [randomNum];
   })
 
   function getRandom() {
@@ -28,7 +25,6 @@ var colors =['green','red','blue','lime','brown'];
 
    var counter=0;
    var counterId = document.getElementById('counter-id');
-
    var buttons = document.querySelectorAll('.btn');
 
    buttons.forEach((e)=>{

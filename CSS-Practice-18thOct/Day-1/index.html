@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,10 +14,10 @@
 </head>
 <body>
 
-    <div class="grid-container">
-        <div class="header">
+    <div class="grid-container ">
+        <div class="header whishlist-container back-color">
             <div class="logo">
-                <img src="./images/best-logo.svg" alt="">
+                <img src="./images/Bay-logo.svg" alt="">
             </div>
             <div class="searchbar">
                 <input type="text" class="search-cnt" placeholder="Search" />
@@ -29,13 +31,15 @@
                     <a href="#">Globe</a></span>
             </div>
         </div>
-        <div class="menubar">
+        <div class="menubar whishlist-container">
             <div class="category">
                 <i class="fa fa-bars" aria-hidden="true"></i>
                 <span>All Categories</span>
             </div>
             <div class="menuitem">
-                <ul class="list">
+
+                <ul id="owl-demo" class="owl-carousel owl-theme list">
+                    
                     <li class="item"><a href="#">Weekly E-Flyer</a></li>
                     <li class="item"><a href="#">Air Conditioners</a></li>
                     <li class="item"><a href="#">Mobile Phones</a></li>
@@ -46,17 +50,23 @@
                     <li class="item"><a href="#">TV & Audio</a></li>
                     <li class="item"><a href="#">Swimming</a></li>
                     <li class="item"><a href="#">Music</a></li>
-                    <!-- <li class="item"><a href="#">Smart Watches</a></li>
-                <li class="item"><a href="#">Gaming</a></li> -->
-                    <!-- <li class="item"><a href="#">Scooters</a></li>
+                    <li class="item"><a href="#">Smart Watches</a></li>
+                <li class="item"><a href="#">Gaming</a></li>
+                 <li class="item"><a href="#">Scooters</a></li>
                 <li class="item"><a href="#">Smart Home</a></li>
-                <li class="item"><a href="#">Trimmers</a></li> -->
-                </ul>
+                <li class="item"><a href="#">Trimmers</a></li>
+                    
+                  </ul>
             </div>
             <div class="mycart">
-                <button class="btn-mycart "><i name="cart" class="fa fa-shopping-cart cart-icon" id="cart-icon" aria-hidden="true"></i>
-                        <div class="cart-count">0</div>    
-                </button>
+                <button class="btn-mycart "><i name="cart" class="fa fa-shopping-cart cart-icon" id="cart-icon" aria-hidden="true"></i>  </button>
+                <!-- <div class="cart-count">0</div>     -->
+               
+
+                <h4 class="item-cart">My Cart 
+                    <div class="item-count">0 item</div>
+
+                </h4>
             </div>
             <div class="cart">
                 <div class="cart-title">Cart Items</div>
@@ -72,27 +82,12 @@
 
                 <button class="btn-buy">Place Order</button>
 
-                <!-- <ion-icon name="close" id="cart-close"></ion-icon> -->
                 <i class="fa fa-times" name="close" id="cart-close" aria-hidden="true"></i>
 
 
             </div>
         </div>
-        <div class="submenu">
-            <ul class="list">
-                <li class="item"><a href="#">
-                        <i class="fa fa-home" aria-hidden="true"></i>
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </a></li>
-                <li class="item"><a href="#">Home Appliance</a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-                <li class="item"><a href="#">Large Appliance</a><i class="fa fa-angle-right" aria-hidden="true"></i>
-                </li>
-                <li class="item"><a href="#" class="cooker-color"> Gas Cookers</a></li>
-
-            </ul>
-
-
-        </div>
+    
     </div>
 
     <section class="whishlist-container">
@@ -311,10 +306,10 @@
               <div class="social-media">
                 <h4 class="title title-margin">Follow Us:</h4>
                 <ul class="item-list">
-                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                  <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                  <i class="fa fa-youtube-square" aria-hidden="true"></i>
-                  <i class="fa fa-linkedin-square" aria-hidden="true"></i>                
+                 <a href="#"> <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                 <a href="#"> <i class="fa fa-twitter-square" aria-hidden="true"></i></a> 
+                 <a href="#"> <i class="fa fa-youtube-square" aria-hidden="true"></i></a> 
+                <a href="#">  <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>                 
                 </ul>
               </div>
             </div>
@@ -361,5 +356,11 @@
           </div>
         </div>
       </section>
+
+      <script src="jquery-1.9.1.min.js"></script>
+      <script src="./carousel.js">
+      
+      </script>
 </body>
+
 </html>
