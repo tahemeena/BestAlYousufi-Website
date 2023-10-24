@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/e-wallet.css">
+    <title>E-wallet Page</title>
+</head>
+<body>
+
+    <div class="grid-container ">
+        <div class="header whishlist-container back-color">
+            <div class="logo">
+                <img src="./images/Bay-logo.svg" alt="">
+            </div>
+            <div class="searchbar">
+                <input type="text" class="search-cnt" placeholder="Search" />
+                <button class="searchicon"><i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="myaccount">
+                <span><i class="fa fa-user-o" aria-hidden="true"> </i>
+                    <a href="#">My Account</a></span>
+                <span><i class="fa fa-globe" aria-hidden="true"></i>
+                    <a href="#">Globe</a></span>
+            </div>
+        </div>
+        <div class="menubar whishlist-container">
+            <div class="category">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <span>All Categories</span>
+            </div>
+            <div class="menuitem">
+
+                <ul id="owl-demo" class="owl-carousel owl-theme list">
+                    
+                    <li class="item"><a href="#">Weekly E-Flyer</a></li>
+                    <li class="item"><a href="#">Air Conditioners</a></li>
+                    <li class="item"><a href="#">Mobile Phones</a></li>
+                    <li class="item"><a href="#">Refrigerators</a></li>
+                    <li class="item"><a href="#">Gas Cookers</a></li>
+                    <li class="item"><a href="#">Laptops</a></li>
+                    <li class="item"><a href="#">Personal Care</a></li>
+                    <li class="item"><a href="#">TV & Audio</a></li>
+                    <li class="item"><a href="#">Swimming</a></li>
+                    <li class="item"><a href="#">Music</a></li>
+                    <li class="item"><a href="#">Smart Watches</a></li>
+                <li class="item"><a href="#">Gaming</a></li>
+                 <li class="item"><a href="#">Scooters</a></li>
+                <li class="item"><a href="#">Smart Home</a></li>
+                <li class="item"><a href="#">Trimmers</a></li>
+                    
+                  </ul>
+            </div>
+            <div class="mycart">
+                <button class="btn-mycart "><i name="cart" class="fa fa-shopping-cart cart-icon" id="cart-icon" aria-hidden="true"></i>
+                  <h5 class="item-cart">My Cart 
+                    <div class="item-count"> 0 item</div>
+
+                </h5>  </button>
+                <!-- <div class="cart-count">0</div>     -->
+               
+
+               
+            </div>
+            <!-- <div class="cart">
+                <div class="cart-title">Cart Items</div>
+                <div class="cart-content">
+
+
+                </div>
+
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">Rs.0</div>
+                </div>
+
+                <button class="btn-buy">Place Order</button>
+
+                <i class="fa fa-times" name="close" id="cart-close" aria-hidden="true"></i>
+
+
+            </div> -->
+        </div>
+    
+    </div>
+    
+    <section class="e-wallet-section">
+        <div class="e-wallet-container">
+            <div class="e-wallet-title">
+                <h1 class="title">My Account</h1>
+            </div>
+            <div class="subheading">
+              <h2 class="sub-title">
+                E-Wallet
+              </h2>
+            </div>
+            <div class="color-container">
+              <div class="left-container"></div>
+              
+            </div>
+
+            <div class="available-bal">
+              <h2 class="bal-title"> Available Balance : 1212.300 KD</h2>
+            </div>
+           
+            <table id="customers">
+              <tr>
+                <th>Date / Time</th>
+                <th>Reference</th>
+                <th>Amount</th>
+                <th>Balance</th>
+              </tr>
+              <tr>
+                <td>17-08-2022 04 : 45 PM</td>
+                <td>0012100</td>
+                <td class="red-color">- 100 KD</td>
+                <td>1400.00 KD</td>
+              </tr>
+              <tr>
+                <td>17-08-2022 04 : 45 PM</td>
+                <td>Gift Card </td>
+                <td class="green-color">+ 1500 KD</td>
+                <td>1500.00 KD</td>
+              </tr>
+              <tr>
+                <td>17-08-2022 04 : 45 PM </td>
+                <td>Gift Card </td>
+                <td class="red-color">- 100 KD</td>
+                <td>1500.00 KD</td>
+              </tr>
+              <tr>
+                <td>17-08-2022 04 : 45 PM </td>
+                <td>Gift Card</td>
+                <td class="red-color">- 100 KD</td>
+                <td>1500.00 KD</td>
+              </tr>
+              
+            </table>
+
+            <div class="pagination">
+              <div class="page-border">
+                <div class="page-numbers">
+                  <div class="page-title">Page 1 of 7</div>
+                  <div class="total-numbers">
+                    <button>0</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button class="red-back">3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                  </div>
+             </div>
+              </div>
+               
+            </div>
+        </div>
+
+        
+    </section>
+    
+    <section class="footer-section">
+        <footer class="footer-container">
+          <div class="item1">
+            <div class="logo">
+              <img src="./images/footer-Logo.png" alt="">
+            </div>
+            <div class="para">A one-stop shop for all entertainment needs, covering lifestyle entertainment products such as electronics, accessories and gifts much more.</div>
+            <div class="newsletter">
+              <input type="text" placeholder="Subscribe to newsletter">
+              <button class="btn btn-yellow btn-newsletter">Subscribe</button>
+            </div>
+            <div class="app-icon">
+              <div class="icon-img">
+                <img src="./images/footer_icons-01.png" alt="">
+              </div>
+              <div class="icon-img">
+                <img src="./images/footer_icons-02.png" alt="">
+              </div>
+              <div class="icon-img">
+                <img src="./images/footer_icons-03.png" alt="">
+              </div> 
+            </div>
+          </div>
+          <div class="item2">
+            <div class="contact-us">
+              <div class="contactus-list">
+                <h4 class="title title-margin">Contact Us</h4>
+              <ul class="list">
+                <li class="item item-style"><a class="footer-para " href="#">Al-Ardiya Kuwait</a></li>
+                <li class="item item-style"><a class="footer-para " href="#">customerservice@best.com.kw</a></li>
+                <li class="item item-style"><a class="footer-para " href="#">+965-1809809</a></li>
+                <li class="item item-style"><a class="footer-para " href="#">Open Time: 8:00AM to 10:00PM</a></li>
+              </ul>
+                
+              </div>
+              <div class="social-media">
+                <h4 class="title title-margin">Follow Us:</h4>
+                <ul class="item-list">
+                 <a href="#"> <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                 <a href="#"> <i class="fa fa-twitter-square" aria-hidden="true"></i></a> 
+                 <a href="#"> <i class="fa fa-youtube-square" aria-hidden="true"></i></a> 
+                <a href="#">  <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>                 
+                </ul>
+              </div>
+            </div>
+            <div class="customer-service">
+              <h4 class="title title-margin">Customer Service</h4>
+              <ul class="list">
+                <li class="item item-style"><a class="footer-para " href="#">Help</a></li>
+                <li class="item item-style"><a class="footer-para " href="#">Contact Us</a></li>
+                <li class="item item-style"><a class="footer-para " href="#">Return Policy</a></li>
+                <li class="item item-style"><a  class="footer-para "  href="#">Privacy Policy</a></li>
+                <li class="item item-style"><a class="footer-para " href="#">FAQs</a></li>
+              </ul>
+            </div>
+            <div class="explore">
+              <h4 class="title title-margin">Explore</h4>
+              <ul class="list">
+                <li class="item item-style"><a class="footer-para " href="#">About Us</a></li>
+                <li class="item item-style"><a class="footer-para " href="#">Store Locator</a> </li>
+                <li class="item item-style"><a class="footer-para " href="#"> Site Map</a></li>
+                <li class="item item-style"><a class="footer-para " href="#">Advanced Search</a></li>
+                <li class="item item-style"><a  class="footer-para " href="#">Weekly E-Flyer</a></li>
+                
+              </ul>
+            </div>
+            <div class="service">
+              <h4 class="title title-margin">Service</h4>
+              <div class="service-icons">
+                <a href="#" class="btn-yellow service-btn"><i class="fa fa-credit-card" aria-hidden="true"></i>
+  
+                  <span>Pay Instalments</span></a>
+                <a href="#" class="btn-yellow service-btn"> <i class="fa fa-user" aria-hidden="true"></i>
+                </i><span>Service Centre</span></a>
+              </div>
+              
+  
+            </div>
+          </div>
+         
+        </footer>
+        <div class="footer-bottom">
+          <div class="text-msg">BEST.COM.KW - © 2022. Al Yousifi & Sons Co. All Rights Reserved</div>
+          <div class="icons">
+            <img src="./images/payment_options_icons.png" alt="">
+          </div>
+        </div>
+      </section>
+
+      <script src="jquery-1.9.1.min.js"></script>
+      <script src="./carousel.js">
+      
+      </script>
+</body>
+
+</html>
