@@ -740,10 +740,14 @@ body {
   display: flex;
 }
 .e-wallet-section .e-wallet-container .pagination .page-border .page-numbers .total-numbers button {
-  margin: 0 8px;
+  margin: 0 4px;
   background: #F1F3F6 0% 0% no-repeat padding-box;
   border-radius: 10px;
   height: 42px;
   width: 42px;
   border: none;
+}
+
+body {
+  font-family: "Rubik", Medium;
 }
