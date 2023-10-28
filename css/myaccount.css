@@ -329,6 +329,7 @@
 }
 .my-account-section .my-account-container {
   padding-left: 30px;
+  padding-right: 30px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1607843137);
   border: 1px solid #EEEEEE;
@@ -344,7 +345,7 @@
   letter-spacing: 0px;
   color: #000000;
   margin-top: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   position: relative;
   width: fit-content;
 }
@@ -354,7 +355,7 @@
   height: 0.2em;
   background: red;
   position: absolute;
-  bottom: -25px;
+  bottom: -18px;
   left: 0;
 }
 .my-account-section .my-account-container .myaccount-content .sub-heading {
