@@ -1,6 +1,7 @@
 .footer-section {
     margin-top: 40px;
     border: none;
+
     .footer-container {
         display: grid;
         grid-template-columns: 1fr 4fr;
@@ -64,11 +65,13 @@
 
         .item2 {
             display: grid;
-            grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+            grid-template-columns: repeat(4, 1fr);
             background-color: #404040;
             padding: 30px 0;
-            padding-inline-start: 16px;
+            padding-inline-start: 20px;
+            padding-inline-end: 20px;
             border: none;
+
             .contact-us {
                 display: flex;
                 flex-direction: column;
@@ -81,9 +84,16 @@
                     flex: 1;
 
                     .item-list {
-                        i {
-                            color: #FFC423;
-                            font-size: 45px;
+                    
+                        .item {
+                            width: 45px;
+                            height: 45px;
+
+
+                            i {
+                                color: #FFC423;
+                                font-size: 45px;
+                            }
                         }
                     }
                 }
@@ -103,19 +113,66 @@
 
             }
 
+            .social-media{
+
+                .item-list {
+                    display: flex;
+                    align-items: center;
+                    
+                    .item {
+                        width: 45px;
+                        height: 45px; 
+                        list-style: none;
+                        border: none;
+                        margin: 5px;
+                        background-color: #FFC423;
+
+                        a {
+                            color: #000000;
+
+                            &:hover {
+                                color: red;
+                            } 
+                            i {
+                                padding: 12px 17px;
+                                font-size: 25px;
+                                
+                            }
+                        }
+
+                    }
+                }
+            }
+
         }
     }
-   
+
 }
+
 .footer-bottom {
     height: 50px;
     background-color: #000000;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     color: white;
     align-items: center;
+    padding: 9px 50px;
+
     .text-msg {
         font-size: 14px;
         text-align: center;
+
+        span {
+            color: #FFC423;
+        }
+    }
+
+    .icons {
+        width: 377px;
+
+        img {
+            width: 100%;
+        }
+
     }
 }

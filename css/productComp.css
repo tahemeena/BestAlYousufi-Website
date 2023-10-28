@@ -114,6 +114,10 @@
   align-items: center;
 }
 .grid-container .header .myaccount span,
+.grid-container .header .myaccount i {
+  font-size: 30px;
+  color: #FFFFFF;
+}
 .grid-container .header .myaccount a {
   color: #F6F6F6;
   font-size: 16px;
@@ -139,6 +143,7 @@
   display: flex;
   justify-content: left;
   align-items: center;
+  width: 1500px;
 }
 .grid-container .menubar .menuitem .list {
   display: flex;
@@ -153,65 +158,77 @@
   text-align: left;
   color: #F6F6F6;
   font-size: 14px;
-  padding: 0 10px;
+  padding: 0 30px;
 }
 .grid-container .menubar .mycart {
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
 }
-.grid-container .menubar .btn-mycart {
+.grid-container .menubar .mycart::before {
+  content: "";
+  border-left: 12px solid rgba(0, 0, 0, 0);
+  border-bottom: 12px solid #ffc423;
+  border-top: 12px solid rgba(0, 0, 0, 0);
+  position: absolute;
+  top: -22px;
+  left: -12px;
+  opacity: 0.73;
+}
+.grid-container .menubar .mycart .btn-mycart {
   background-color: #FFC423;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  padding: 0;
-  height: 52px;
   position: absolute;
   top: -12px;
+  padding: 0 10px;
+  gap: 10px;
+  height: 52px;
 }
-.grid-container .menubar .btn-mycart .list {
+.grid-container .menubar .mycart .btn-mycart::after {
+  content: "";
+  border-top: 12px solid rgba(0, 0, 0, 0);
+  border-right: 12px solid rgba(0, 0, 0, 0);
+  border-bottom: 12px solid #ffc423;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  opacity: 0.73;
+}
+.grid-container .menubar .mycart .btn-mycart i {
+  font-size: 30px;
+  background-size: contain;
+}
+.grid-container .menubar .mycart .btn-mycart .item-count {
+  font-size: 12px;
+}
+.grid-container .menubar .mycart .btn-mycart .list {
   padding: 0 10px;
 }
-.grid-container .menubar .btn-mycart .list a {
+.grid-container .menubar .mycart .btn-mycart .list a {
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   color: #000000;
 }
-.grid-container .menubar .btn-mycart i {
-  font-size: 30px;
-  margin: 0 14px;
-}
-.grid-container .menubar .btn-mycart .item-cart {
-  margin: 0 5px;
-  font-size: 12px;
-  font-weight: bold;
-}
-.grid-container .menubar .btn-mycart .item-cart .item-count {
-  padding-top: 5px;
-  font-size: 12px;
-  font-weight: normal;
-}
-.grid-container .submenu {
+.grid-container .menubar .submenu {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 40px;
   background-color: #E8E8E8;
 }
-.grid-container .submenu .list {
+.grid-container .menubar .submenu .list {
   display: flex;
   justify-content: left;
   align-items: center;
   margin-inline-start: 44px;
 }
-.grid-container .submenu .list .item {
+.grid-container .menubar .submenu .list .item {
   list-style: none;
 }
-.grid-container .submenu .list .item a,
-.grid-container .submenu .list .item i {
+.grid-container .menubar .submenu .list .item a,
+.grid-container .menubar .submenu .list .item i {
   text-decoration: none;
   color: #757575;
   font-size: 12px;
